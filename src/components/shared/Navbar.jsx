@@ -34,7 +34,7 @@ const Navbar = () => {
                             alt='logo' 
                             className='rounded-full w-8 lg:w-full'
                         />
-                        <h2 className='text-2xl lg:text-4xl font-bold text-amber-950'>QurbaniHat</h2>
+                        <h2 className='text-2xl lg:text-4xl font-bold bg-linear-to-r from-amber-950 to-amber-800 bg-clip-text text-transparent'>QurbaniHat</h2>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 text-amber-700 text-lg font-semibold">
                         <li><Navlink href={'/'}>Home</Navlink></li>
                         <li><Navlink href={'/animals'}>All Animals</Navlink></li>
-                        <li><Navlink href={'/about'}>About</Navlink></li>
+                        {/* <li><Navlink href={'#about'} className="">About</Navlink></li> */}
                     </ul>
                 </div>
 

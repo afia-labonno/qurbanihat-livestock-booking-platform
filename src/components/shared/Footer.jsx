@@ -47,7 +47,7 @@ const Footer = () => {
 
                     {/* about section */}
                     <div className='text-white space-y-4 px-4 col-span-3'>
-                        <h2 className='text-xl lg:text-2xl font-bold text-center lg:text-start'>Aobut Us</h2>
+                        <h2 id="about" className='text-xl lg:text-2xl font-bold text-center lg:text-start'>Aobut Us</h2>
                         <p className='text-sm lg:text-lg text-gray-300'>
                             {
                                 isExpand ? aboutUs : `${shortText}...`
