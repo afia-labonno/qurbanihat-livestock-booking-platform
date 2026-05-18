@@ -28,7 +28,7 @@ const QurbaniTips = async () => {
                 <h2 className='text-2xl bg-linear-to-r from-amber-950 to-amber-600
                      transition-all duration-300 bg-clip-text text-transparent
                     lg:text-4xl font-bold px-2'>
-                    Qurbani Guide
+                    Qurbani Tips
                 </h2>
                 <p className='m-2 text-amber-700 text-sm lg:text-base'>
                     Learn essential tips for choosing healthy and suitable animals for Qurbani.
