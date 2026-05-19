@@ -12,3 +12,10 @@ export const getTips = async()=>{
     const data = await res.json();
     return data;
 }
+
+// animals data fetching
+export const getAnimals = async()=>{
+    const res = await fetch('https://qurbanihat-server-dkeu.onrender.com/animals');
+    const data = await res.json();
+    return data ;
+}
