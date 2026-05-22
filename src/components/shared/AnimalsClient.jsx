@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoLocationSharp, IoSearch } from 'react-icons/io5';
@@ -66,7 +67,7 @@ const AnimalsClient = ({ animals }) => {
                         <IoSearch className="text-gray-500 text-lg" />
                         <input onChange={(e) => setSearch(e.target.value)}
                             type="text" placeholder="Search by type or category" value={search}
-                            className="bg-transparent outline-none w-full text-md text-gray-700 placeholder-gray-400"
+                            className="bg-transparent outline-none w-full text-md text-base-300 placeholder-gray-400"
                         />
                     </div>
                 </div>
@@ -106,8 +107,15 @@ const AnimalsClient = ({ animals }) => {
                                 </div>
 
                                 <div className='flex justify-between'>
-                                    <p className='flex items-center font-semibold text-md lg:text-lg text-orange-800'><TbCurrencyTaka />{animal.price}</p>
-                                    <button className='btn bg-amber-800 text-zinc-200'>View Details</button>
+                                    <p 
+                                        className='flex items-center font-semibold 
+                                        text-md lg:text-lg text-orange-800'>
+                                            <TbCurrencyTaka />{animal.price}
+                                    </p>
+
+                                    <Link href={`/animals/${animal.id}`}>
+                                        <button className='btn bg-amber-800 text-zinc-200'>View Details</button>
+                                    </Link>
                                 </div>
 
                             </div>
