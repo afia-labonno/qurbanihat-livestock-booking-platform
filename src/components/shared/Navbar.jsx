@@ -120,7 +120,7 @@ const Navbar = () => {
                                         </div>
 
                                         <li>
-                                            <Link href={'/updateUser'}>
+                                            <Link href={'/update-profile'}>
                                                 <button className='btn btn-ghost w-full'>Update Profile</button>
                                             </Link>
                                         </li>
