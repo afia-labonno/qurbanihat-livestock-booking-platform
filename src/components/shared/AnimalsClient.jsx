@@ -79,7 +79,7 @@ const AnimalsClient = ({ animals }) => {
                 {
                     sortedAnimals?.map((animal) => (
                         <div key={animal.id}
-                            className='card shadow-md hover:shadow-lg bg-base-200 rounded-lg p-4 border border-lime-200 transition-all duration-500'
+                            className='card shadow-md hover:shadow-lg bg-base-300 rounded-lg p-4 border border-lime-200 transition-all duration-500'
                         >
                             <div className='space-y-2'>
                                 <figure className='h-60 overflow-hidden'>
@@ -87,7 +87,7 @@ const AnimalsClient = ({ animals }) => {
                                         src={animal.image}
                                         width={300} height={300}
                                         alt={animal.type}
-                                        className='rounded-md object-cover w-full h-full'
+                                        className='rounded-xl object-cover w-full h-full'
                                     />
                                 </figure>
 

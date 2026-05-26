@@ -15,7 +15,15 @@ const AnimalsDetailsPage = async ({ params }) => {
 
     return (
         <div>
-            Animal Details Page
+            
+            <div className='bg-linear-to-l from-amber-950 to-amber-700 py-10 w-full'>
+                <h2 className='text-center font-bold text-2xl 
+                lg:text-4xl text-white'>
+
+                    Animal Details
+                </h2>
+            </div>
+
             <div className='max-w-3xl mx-auto my-6'>
                 <div className="card bg-base-100 shadow-sm p-2">
 

@@ -1,5 +1,4 @@
 'use client'
-import { useMemoryRouter } from 'next-router-mock';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -43,18 +42,20 @@ const BookingForm = ({ animal }) => {
 
 
     return (
-        <div className='container mx-auto min-h-[80vh] bg-base-200 flex justify-center items-center py-10'>
-            <div className='max-w-2xl w-full bg-base-100 shadow-2xl border border-amber-100 rounded-md py-10 px-6 space-y-2 '>
+        <div className='container mx-auto min-h-[80vh] bg-base-200 flex justify-center items-center py-12 lg:py-10'>
+            <div className='max-w-2xl w-full bg-base-100 shadow-2xl border border-amber-100 rounded-md pb-10 lg:pb-4 py-14 px-6 lg:space-y-0.5 relative'>
 
-                <div className='flex justify-between items-center px-4'>
+                {/* <div className='flex justify-between items-center px-4'> */}
                     <h2 className='text-xl lg:text-3xl font-bold text-amber-900 text-center'>
                         Booking Form
                     </h2>
                     {/* cancel btn */}
                     <Link href={`/animals/${animal.id}`}>
-                        <button className='btn btn-ghost hover:text-red-500 mt-6'><TiDelete className='text-xl text-right text-red-500' /></button>
+                        <button className='btn btn-ghost mt-6 absolute right-4 top-0.5'>
+                            <TiDelete className='text-2xl text-right text-red-500' />
+                        </button>
                     </Link>
-                </div>
+                {/* </div> */}
 
                 <div className='divider mx-auto px-6'></div>
 

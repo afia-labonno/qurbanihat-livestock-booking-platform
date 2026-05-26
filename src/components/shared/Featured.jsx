@@ -1,11 +1,13 @@
-import { getFeatured } from '@/lib/data';
+import { getAnimals, getFeatured } from '@/lib/data';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 
-const Featured = async () => {
+const Featured = async ({ animal }) => {
     const data = await getFeatured();
     // console.log("Featured data: ", data);
+    const animalData = await getAnimals();
 
     return (
         <div>
@@ -36,11 +38,16 @@ const Featured = async () => {
                                 <h2 className="card-title text-amber-800 font-semibold">
                                     {featured.category}
                                     <div className="badge bg-amber-200 text-amber-800 text-xs justify-end rounded-full">
-                                        {featured.total}+ Available
+                                        {
+                                            animalData.filter((animal) =>
+                                                animal.type === featured.type
+                                            ).length
+                                        }+ Available
                                     </div>
                                 </h2>
                                 <p className='text-sm text-amber-600'>{featured.description}</p>
 
+                                <Link href={`/animals?type=${featured.type}`}>
                                     <button className='btn rounded-lg
                                         bg-linear-to-l from-amber-700 to-orange-400 text-zinc-300       
                                         transition-all duration-500 hover:scale-105 border-2 border-amber-300 shadow-lg'
@@ -48,6 +55,8 @@ const Featured = async () => {
 
                                         Explore More
                                     </button>
+                                </Link>
+
                             </div>
                         </div>
                     ))
