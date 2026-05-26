@@ -102,7 +102,7 @@ const SigninPage = () => {
 
                     <button className='btn w-full btn-primary text-white'>Sign In</button>
                     <button onClick={handleGoogleSignin}
-                        className='btn w-full text-blue-600
+                        className='btn w-full text-blue-700
                                                         border-2 border-gray-600 
                                                         flex gap-2 font-semibold'>
                         <FaGoogle />
