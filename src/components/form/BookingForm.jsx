@@ -27,14 +27,19 @@ const BookingForm = ({ animal }) => {
     }
 
     const handleSubmit = async (e) => {
+
+        if (!formData.name || !formData.email || !formData.phone || !formData.address) {
+            toast.error("Please fill all fields!");
+            return;
+        }
         e.preventDefault();
 
         toast.success("Booking Comfirmed Successfully !")
 
-        setTimeout(()=>{
+        setTimeout(() => {
             router.push('/animals')
-        },3000);
-       
+        }, 3000);
+
         setFormData(formState);
 
     };
@@ -46,15 +51,15 @@ const BookingForm = ({ animal }) => {
             <div className='max-w-2xl w-full bg-base-100 shadow-2xl border border-amber-100 rounded-md pb-10 lg:pb-4 py-14 px-6 lg:space-y-0.5 relative'>
 
                 {/* <div className='flex justify-between items-center px-4'> */}
-                    <h2 className='text-xl lg:text-3xl font-bold text-amber-900 text-center'>
-                        Booking Form
-                    </h2>
-                    {/* cancel btn */}
-                    <Link href={`/animals/${animal.id}`}>
-                        <button className='btn btn-ghost mt-6 absolute right-4 top-0.5'>
-                            <TiDelete className='text-2xl text-right text-red-500' />
-                        </button>
-                    </Link>
+                <h2 className='text-xl lg:text-3xl font-bold text-amber-900 text-center'>
+                    Booking Form
+                </h2>
+                {/* cancel btn */}
+                <Link href={`/animals/${animal.id}`}>
+                    <button className='btn btn-ghost mt-6 absolute right-4 top-0.5'>
+                        <TiDelete className='text-2xl text-right text-red-500' />
+                    </button>
+                </Link>
                 {/* </div> */}
 
                 <div className='divider mx-auto px-6'></div>
@@ -97,7 +102,10 @@ const BookingForm = ({ animal }) => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder='Enter Your Name'
-                            className='input input-bordered w-full' />
+                            className='input input-bordered w-full' 
+                            required
+                        />
+                            
                     </fieldset>
 
                     {/* email*/}
@@ -108,7 +116,9 @@ const BookingForm = ({ animal }) => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder='Enter Your Email'
-                            className='input input-bordered w-full' />
+                            className='input input-bordered w-full' 
+                            required
+                        />
                     </fieldset>
 
                     {/* phone */}
@@ -119,7 +129,9 @@ const BookingForm = ({ animal }) => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder='Enter Your Phone Number'
-                            className='input input-bordered w-full' />
+                            className='input input-bordered w-full' 
+                            required
+                        />
                     </fieldset>
 
                     {/* address */}
@@ -130,7 +142,9 @@ const BookingForm = ({ animal }) => {
                             value={formData.address}
                             onChange={handleChange}
                             placeholder='Enter Your Full Address'
-                            className='input input-bordered w-full' />
+                            className='input input-bordered w-full' 
+                            required
+                        />
                     </fieldset>
 
                     <button className='btn w-full bg-amber-700 text-white font-semibold my-4'>Confirm Booking</button>
