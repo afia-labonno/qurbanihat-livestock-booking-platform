@@ -99,11 +99,14 @@ const AnimalsClient = ({ animals }) => {
                                 </h2>
 
                                 <div className='flex justify-between gap-4'>
-                                    <div className='text-orange-900'>
+                                    <div className='text-orange-900 text-sm'>
                                         <p>Breed: {animal.breed}</p>
                                         <p>Weight: {animal.weight}kg</p>
                                     </div>
-                                    <p className='flex items-center gap-1 mx-2 text-amber-700 font-semibold'><IoLocationSharp className='text-red-500 animate-pulse [animate-duration:2s]' />{animal.location}</p>
+                                    <p className='flex items-center gap-1 mx-2 text-amber-700 text-sm font-semibold'>
+                                        <IoLocationSharp className='text-red-500 animate-pulse [animate-duration:2s]' />
+                                        {animal.location}
+                                    </p>
                                 </div>
 
                                 <div className='flex justify-between'>
