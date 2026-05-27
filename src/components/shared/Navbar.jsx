@@ -64,17 +64,17 @@ const Navbar = () => {
                 ) : (
 
                     <div className='flex gap-2 items-center'>
-                          {
-                                user && (
-                                    <div className='hidden sm:flex items-center'>
-                                        <span className='text-sm text-gray-600'>
-                                            Hi! {user?.name}
-                                        </span>
-                                    </div>
-                                )
-                            }
+                        {
+                            user && (
+                                <div className='hidden sm:flex items-center'>
+                                    <span className='text-sm text-gray-600'>
+                                        Hi! {user?.name}
+                                    </span>
+                                </div>
+                            )
+                        }
                         <div className="dropdown dropdown-end ">
-                          
+
                             {/* profile image button */}
                             <div
                                 tabIndex={0}
@@ -119,9 +119,12 @@ const Navbar = () => {
                                             </p>
                                         </div>
 
-                                        <li>
-                                            <Link href={'/update-profile'}>
-                                                <button className='btn btn-ghost w-full'>Update Profile</button>
+                                        <li className='w-full flex justify-center'>
+                                            <Link
+                                                href={'/update-profile'}
+                                                className='btn btn-ghost w-full text-center'
+                                            >
+                                                Update Profile
                                             </Link>
                                         </li>
 
@@ -138,7 +141,7 @@ const Navbar = () => {
                                     </>
                                 ) : (
                                     <li>
-                                        <Link href="/signin">
+                                        <Link href="/signin" className='text-amber-800 font-semibold text-xl btn btn-ghost w-full' >
                                             Login
                                         </Link>
                                     </li>
