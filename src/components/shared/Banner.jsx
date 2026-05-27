@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import bannerImage from '@/assets/banner.png';
 import React from 'react';
+import Link from 'next/link';
 
 const Banner = () => {
     return (
@@ -23,8 +24,11 @@ const Banner = () => {
                 <h2 className='text-2xl lg:text-4xl font-bold bg-linear-to-r from-amber-950 to-amber-800 bg-clip-text text-transparent'>
                     Find Your Perfect Qurbani Animals
                 </h2>
-                <p className='text-amber-800 text-md'>Discover healthy and premium-quality animals for your Qurbani with ease. QurbaniHat connects you with trusted livestock sellers, detailed animal information, and a smooth booking experience — all in one place. Explore different breeds, compare prices, and choose the right animal with confidence for your sacred occasion.</p>
-                <button className='btn rounded-full 
+                <p className='text-amber-800 text-md'>
+                    Discover healthy and premium-quality animals for your Qurbani with ease. QurbaniHat connects you with trusted livestock sellers, detailed animal information, and a smooth booking experience — all in one place. Explore different breeds, compare prices, and choose the right animal with confidence for your sacred occasion.
+                </p>
+                <Link href={'/animals'}>
+                    <button className='btn rounded-full 
                                     bg-linear-to-r
                                      from-orange-800 
                                      to-orange-500 
@@ -35,6 +39,8 @@ const Banner = () => {
                                      shadow-lg'>
                     Browse Animals
                 </button>
+                </Link>
+                
             </div>
 
             <div className='col-span-2 px-4'>
