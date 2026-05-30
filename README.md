@@ -139,8 +139,8 @@ Clone the repository:
 git clone https://github.com/afia-labonno/qurbanihat-livestock-booking-platform.git
 cd qurbanihat
 npm install
-MONGODB_URI=your_mongodb_connection_string
-API_BASE_URL=your_backend_api_url
+MONGODB_URI=mongodb_connection_string
+API_BASE_URL=backend_api_url
 npm run dev
 http://localhost:3000
 
